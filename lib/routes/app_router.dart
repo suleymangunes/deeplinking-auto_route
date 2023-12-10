@@ -7,6 +7,6 @@ class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
         AutoRoute(path: "/HomeRoute", page: HomeRoute.page, initial: true),
-        AutoRoute(path: "/DeepLinkRoute", page: DeepLinkingRoute.page),
+        AutoRoute(path: "/DeepLinkRoute/:token", page: DeepLinkingRoute.page),
       ];
 }

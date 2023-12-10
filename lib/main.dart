@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:deeplinking_autoroute/routes/app_router.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,17 @@ class MyApp extends StatelessWidget {
     AppRouter appRouter = AppRouter();
     return MaterialApp.router(
       title: 'Material App',
-      routerConfig: appRouter.config(),
+      routerConfig: appRouter.config(
+        deepLinkBuilder: (deepLink) {
+          if (deepLink.path.startsWith('/DeepLinkRoute')) {
+            return deepLink;
+          } else {
+            return DeepLink.defaultPath;
+            // or DeepLink.path('/')
+            // or DeepLink([HomeRoute()])
+          }
+        },
+      ),
     );
   }
 }
