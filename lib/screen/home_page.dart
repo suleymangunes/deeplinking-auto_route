@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
             const Text("This is home page."),
             ElevatedButton(
                 onPressed: () {
-                  context.router.pushNamed("/DeepLinkRoute");
+                  context.router.pushNamed("/DeepLinkRoute/123");
                 },
                 child: const Text("Go Deep Link Page")),
           ],

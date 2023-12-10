@@ -17,7 +17,7 @@ class DeepLinkingPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text("This is Deep Linking Page ."),
-            Text(token ?? "Token is null"),
+            Text("token: $token"),
           ],
         ),
       ),
